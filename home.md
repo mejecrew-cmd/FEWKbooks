@@ -15,9 +15,9 @@
 | Book | 제목 | 설명 | 상태 |
 |------|------|------|------|
 | [[book0/index\|Book 0]] | Quick Start (이지룰) | 5분 안에 시작하는 FEWK. 프리메이드 캐릭터 4명 + 입문 시나리오 | 공개 |
-| Book 1 | World Guide (세계관 안내서) | 세계의 법칙, 역사, 지리, 사회, 인물 | 준비 중 |
-| Book 2 | Player's Guide (플레이어 가이드) | 캐릭터 생성 + 전체 규칙 | 준비 중 |
-| Book 3 | Game Master's Guide | 시나리오 + GM 도구. GM 전용 | 준비 중 |
+| [[book1/index\|Book 1]] | World Guide (세계관 안내서) | 세계의 법칙, 역사, 지리, 사회, 인물 | 공개 |
+| [[book2/index\|Book 2]] | Player's Guide (플레이어 가이드) | 캐릭터 생성 + 전체 규칙 | 공개 |
+| [[book3/index\|Book 3]] | Game Master's Guide | 시나리오 + GM 도구. GM 전용 | 공개 |
 | Book 4 | 통합상거래 안내서 | 장비, 무기, 임플란트, 탈것 카탈로그 | 준비 중 |
 | Book 5 | 계도감 (Atlas of Dimensions) | 차원계 탐사 가이드 | 준비 중 |
 | Book 6 | 존재도감 (Bestiary & Beings) | 존재 분류, 몬스터, 클래스, NPC | 준비 중 |
