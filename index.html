@@ -230,16 +230,19 @@ body {
   font-size:.85rem;
   color:var(--bg);
 }
-.content-area table {
-  width:100%;
-  border-collapse:collapse;
+.content-area .table-wrap {
+  overflow-x:auto;
   margin:.8rem 0;
+}
+.content-area table {
+  border-collapse:collapse;
   font-size:.9rem;
-  table-layout:auto;
+  min-width:600px;
+  width:100%;
 }
 .content-area td, .content-area th {
-  white-space:normal;
   word-break:keep-all;
+  white-space:nowrap;
 }
 .content-area th {
   background:var(--dk3);
@@ -533,6 +536,14 @@ async function loadPage(page) {
     // Convert wikilinks then parse markdown
     md = convertWikilinks(md);
     content.innerHTML = marked.parse(md);
+
+    // Wrap tables in scrollable container
+    content.querySelectorAll('table').forEach(function(t) {
+      var wrap = document.createElement('div');
+      wrap.className = 'table-wrap';
+      t.parentNode.insertBefore(wrap, t);
+      wrap.appendChild(t);
+    });
 
     // Make all wiki links use navigateTo
     content.querySelectorAll('a[href^="#"]').forEach(function(a) {
