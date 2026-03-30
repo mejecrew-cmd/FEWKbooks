@@ -392,12 +392,61 @@ body {
   </details>
 
   <details class="nav-book">
-    <summary>Book 4~7 — 준비 중</summary>
+    <summary>Book 4 — 통합상거래 안내서</summary>
     <div class="nav-children">
-      <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 4: 통합상거래 안내서</span>
-      <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 5: 계도감</span>
-      <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 6: 존재도감</span>
-      <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 7: 세력도감</span>
+      <a class="nav-link" href="#book4/index" data-page="book4/index">목차</a>
+      <a class="nav-link sub" href="#book4/power" data-page="book4/power">① 동력과 에너지</a>
+      <a class="nav-link sub" href="#book4/daily" data-page="book4/daily">② 일상 장비</a>
+      <a class="nav-link sub" href="#book4/medical" data-page="book4/medical">③ 의료·생체</a>
+      <a class="nav-link sub" href="#book4/weapons" data-page="book4/weapons">④ 무기</a>
+      <a class="nav-link sub" href="#book4/armor" data-page="book4/armor">⑤ 방어구</a>
+      <a class="nav-link sub" href="#book4/implants" data-page="book4/implants">⑥ 임플란트</a>
+      <a class="nav-link sub" href="#book4/vehicles" data-page="book4/vehicles">⑦ 탈것</a>
+      <a class="nav-link sub" href="#book4/sinki" data-page="book4/sinki">⑧ 신기·무속</a>
+      <a class="nav-link sub" href="#book4/dimension" data-page="book4/dimension">⑨ 차원이동 장비</a>
+      <a class="nav-link sub" href="#book4/services" data-page="book4/services">⑩ 서비스</a>
+    </div>
+  </details>
+
+  <details class="nav-book">
+    <summary>Book 5 — 계도감</summary>
+    <div class="nav-children">
+      <a class="nav-link" href="#book5/index" data-page="book5/index">목차</a>
+      <a class="nav-link sub" href="#book5/understanding" data-page="book5/understanding">계의 이해</a>
+      <a class="nav-link sub" href="#book5/generation" data-page="book5/generation">계 생성 규칙</a>
+      <a class="nav-link sub" href="#book5/physical" data-page="book5/physical">물질계: 서울</a>
+      <a class="nav-link sub" href="#book5/bunker" data-page="book5/bunker">벙커계</a>
+      <a class="nav-link sub" href="#book5/catalog-natural" data-page="book5/catalog-natural">자연계 카탈로그</a>
+      <a class="nav-link sub" href="#book5/catalog-artificial" data-page="book5/catalog-artificial">인공계 카탈로그</a>
+      <a class="nav-link sub" href="#book5/uncharted" data-page="book5/uncharted">미탐험계 5종</a>
+      <a class="nav-link sub" href="#book5/random" data-page="book5/random">랜덤 계 20개</a>
+    </div>
+  </details>
+
+  <details class="nav-book">
+    <summary>Book 6 — 존재도감</summary>
+    <div class="nav-children">
+      <a class="nav-link" href="#book6/index" data-page="book6/index">목차</a>
+      <a class="nav-link sub" href="#book6/classification" data-page="book6/classification">존재의 분류</a>
+      <a class="nav-link sub" href="#book6/tenebre" data-page="book6/tenebre">흑공 존재</a>
+      <a class="nav-link sub" href="#book6/artificial" data-page="book6/artificial">인공 존재</a>
+      <a class="nav-link sub" href="#book6/modified" data-page="book6/modified">변형 인간</a>
+      <a class="nav-link sub" href="#book6/classes" data-page="book6/classes">직업과 클래스</a>
+      <a class="nav-link sub" href="#book6/npc-gallery" data-page="book6/npc-gallery">NPC 갤러리</a>
+    </div>
+  </details>
+
+  <details class="nav-book">
+    <summary>Book 7 — 세력도감</summary>
+    <div class="nav-children">
+      <a class="nav-link" href="#book7/index" data-page="book7/index">목차</a>
+      <a class="nav-link sub" href="#book7/embassies" data-page="book7/embassies">대사국</a>
+      <a class="nav-link sub" href="#book7/corporations" data-page="book7/corporations">(주)기업</a>
+      <a class="nav-link sub" href="#book7/guilds" data-page="book7/guilds">길드와 조직</a>
+      <a class="nav-link sub" href="#book7/runners" data-page="book7/runners">러너의 세계</a>
+      <a class="nav-link sub" href="#book7/economy" data-page="book7/economy">러너 경제</a>
+      <a class="nav-link sub" href="#book7/missions" data-page="book7/missions">미션 제너레이터</a>
+      <a class="nav-link sub" href="#book7/relations" data-page="book7/relations">세력 관계도</a>
     </div>
   </details>
 </nav>
@@ -463,7 +512,42 @@ const PAGE_LABELS = {
   'book3/ch16-npc': '16장. NPC와 적 데이터',
   'book3/ch17-scenarios': '17장. 시나리오 3편',
   'book3/ch17-campaign': '17장b. 캠페인 아크',
-  'book3/appendix': '부록: GM 도구'
+  'book3/appendix': '부록: GM 도구',
+  'book4/index': 'Book 4 목차',
+  'book4/power': '① 동력과 에너지',
+  'book4/daily': '② 일상 장비',
+  'book4/medical': '③ 의료·생체',
+  'book4/weapons': '④ 무기',
+  'book4/armor': '⑤ 방어구',
+  'book4/implants': '⑥ 임플란트',
+  'book4/vehicles': '⑦ 탈것',
+  'book4/sinki': '⑧ 신기·무속',
+  'book4/dimension': '⑨ 차원이동 장비',
+  'book4/services': '⑩ 서비스',
+  'book5/index': 'Book 5 목차',
+  'book5/understanding': '계의 이해',
+  'book5/generation': '계 생성 규칙',
+  'book5/physical': '물질계: 서울',
+  'book5/bunker': '벙커계',
+  'book5/catalog-natural': '자연계 카탈로그',
+  'book5/catalog-artificial': '인공계 카탈로그',
+  'book5/uncharted': '미탐험계 5종',
+  'book5/random': '랜덤 계 20개',
+  'book6/index': 'Book 6 목차',
+  'book6/classification': '존재의 분류',
+  'book6/tenebre': '흑공 존재',
+  'book6/artificial': '인공 존재',
+  'book6/modified': '변형 인간',
+  'book6/classes': '직업과 클래스',
+  'book6/npc-gallery': 'NPC 갤러리',
+  'book7/index': 'Book 7 목차',
+  'book7/embassies': '대사국',
+  'book7/corporations': '(주)기업',
+  'book7/guilds': '길드와 조직',
+  'book7/runners': '러너의 세계',
+  'book7/economy': '러너 경제',
+  'book7/missions': '미션 제너레이터',
+  'book7/relations': '세력 관계도'
 };
 
 // Convert [[wikilinks]] to markdown links before table parsing

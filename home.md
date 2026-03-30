@@ -24,17 +24,17 @@
 ### [Book 3 — Game Master's Guide](#book3/index)
 시나리오 3편 + 미션 설계 + NPC 데이터 + GM 도구. GM 전용.
 
-### Book 4 — 통합상거래 안내서
-장비, 무기, 임플란트, 탈것 카탈로그. (준비 중)
+### [Book 4 — 통합상거래 안내서](#book4/index)
+대사만국 통합상거래 안내서. 동력, 장비, 무기, 방어구, 임플란트, 탈것, 서비스 카탈로그.
 
-### Book 5 — 계도감 (Atlas of Dimensions)
-차원계 탐사 가이드. (준비 중)
+### [Book 5 — 계도감 (Atlas of Dimensions)](#book5/index)
+차원계의 이해, 생성 규칙, 물질계/벙커계/자연계/인공계 카탈로그, 미탐험계 5종.
 
-### Book 6 — 존재도감 (Bestiary & Beings)
-존재 분류, 몬스터, 클래스, NPC. (준비 중)
+### [Book 6 — 존재도감 (Bestiary & Beings)](#book6/index)
+존재 분류, 흑공 존재, 인공 존재, 변형 인간, 직업 클래스, NPC 갤러리.
 
-### Book 7 — 세력도감 (Factions & Operations)
-대사국, 기업, 러너, 미션 제너레이터. (준비 중)
+### [Book 7 — 세력도감 (Factions & Operations)](#book7/index)
+대사국 10국, 기업 23사, 길드, 러너 문화, 경제, 미션 제너레이터, 세력 관계도.
 
 ---
 
