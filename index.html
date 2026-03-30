@@ -1,0 +1,30 @@
+---
+layout: default
+title: "홈"
+---
+<div class="hero">
+  <h1 class="hero-title">
+    <span class="glow-cyan">FEWK</span> <span class="glow-magenta">LOREBOOK</span>
+  </h1>
+  <p class="hero-sub">
+    다크 사이버펑크 세계관의 모든 기록이 이곳에 보존됩니다.<br>
+    캐릭터, 세력, 장소, 그리고 잊혀진 역사까지.
+  </p>
+</div>
+
+<h2 style="color: #00f0ff; margin-bottom: 0.5rem;">최근 로어북 항목</h2>
+<div class="card-grid">
+  {% assign all_entries = site.lorebook | concat: site.characters | concat: site.factions | concat: site.locations | sort: 'date' | reverse %}
+  {% for item in all_entries limit: 6 %}
+  <a href="{{ item.url | relative_url }}" class="card">
+    {% if item.category %}<div class="card-tag">{{ item.category }}</div>{% endif %}
+    <h3 class="card-title">{{ item.title }}</h3>
+    {% if item.description %}<p class="card-desc">{{ item.description }}</p>{% endif %}
+    {% if item.tags %}
+    <div style="margin-top: 0.8rem;">
+      {% for tag in item.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+    </div>
+    {% endif %}
+  </a>
+  {% endfor %}
+</div>
