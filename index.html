@@ -85,6 +85,40 @@ body {
 }
 .nav-link.sub { padding-left:2.2rem; font-size:.82rem; }
 
+/* ── Collapsible book sections ── */
+.nav-book {
+  border-bottom:1px solid rgba(42,42,74,.5);
+}
+.nav-book summary {
+  padding:.6rem 1.2rem .4rem;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.72rem;
+  color:var(--bg3);
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  cursor:pointer;
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:.4rem;
+  user-select:none;
+}
+.nav-book summary::-webkit-details-marker { display:none; }
+.nav-book summary::before {
+  content:'▸';
+  font-size:.7rem;
+  color:var(--bg3);
+  transition:transform .2s;
+  display:inline-block;
+}
+.nav-book[open] summary::before {
+  transform:rotate(90deg);
+}
+.nav-book summary:hover { color:var(--bg2); }
+.nav-book .nav-children {
+  padding-bottom:.3rem;
+}
+
 /* ── Mobile toggle ── */
 .menu-toggle {
   display:none;
@@ -287,58 +321,77 @@ body {
     <span>[</span>FEWK<span>]</span> LOREBOOK
   </div>
 
-  <div class="nav-section">Home</div>
-  <a class="nav-link" href="#home" data-page="home">FEWK LOREBOOK 포털</a>
+  <a class="nav-link" href="#home" data-page="home" style="border-bottom:1px solid var(--border);padding-bottom:.5rem;margin-bottom:.3rem">FEWK LOREBOOK 포털</a>
 
-  <div class="nav-section">Book 0 — Quick Start</div>
-  <a class="nav-link" href="#book0/index" data-page="book0/index">Book 0 목차</a>
-  <a class="nav-link sub" href="#book0/world" data-page="book0/world">세계소개</a>
-  <a class="nav-link sub" href="#book0/fiction" data-page="book0/fiction">세 개의 밤 (단편)</a>
-  <a class="nav-link sub" href="#book0/rules" data-page="book0/rules">이지룰</a>
-  <a class="nav-link sub" href="#book0/jin" data-page="book0/jin">진(Jin)</a>
-  <a class="nav-link sub" href="#book0/soha" data-page="book0/soha">소화(Soha)</a>
-  <a class="nav-link sub" href="#book0/maboy" data-page="book0/maboy">마보이(Maboy)</a>
-  <a class="nav-link sub" href="#book0/hankan" data-page="book0/hankan">한칸(Hankan)</a>
-  <a class="nav-link sub" href="#book0/scenario" data-page="book0/scenario">레드 몽키즈 런</a>
-  <a class="nav-link sub" href="#book0/reference" data-page="book0/reference">빠른 참조</a>
-  <a class="nav-link sub" href="#book0/series" data-page="book0/series">시리즈 안내</a>
+  <details class="nav-book" open>
+    <summary>Book 0 — Quick Start</summary>
+    <div class="nav-children">
+      <a class="nav-link" href="#book0/index" data-page="book0/index">목차</a>
+      <a class="nav-link sub" href="#book0/world" data-page="book0/world">세계소개</a>
+      <a class="nav-link sub" href="#book0/fiction" data-page="book0/fiction">세 개의 밤</a>
+      <a class="nav-link sub" href="#book0/rules" data-page="book0/rules">이지룰</a>
+      <a class="nav-link sub" href="#book0/jin" data-page="book0/jin">진(Jin)</a>
+      <a class="nav-link sub" href="#book0/soha" data-page="book0/soha">소화(Soha)</a>
+      <a class="nav-link sub" href="#book0/maboy" data-page="book0/maboy">마보이(Maboy)</a>
+      <a class="nav-link sub" href="#book0/hankan" data-page="book0/hankan">한칸(Hankan)</a>
+      <a class="nav-link sub" href="#book0/scenario" data-page="book0/scenario">레드 몽키즈 런</a>
+      <a class="nav-link sub" href="#book0/reference" data-page="book0/reference">빠른 참조</a>
+      <a class="nav-link sub" href="#book0/series" data-page="book0/series">시리즈 안내</a>
+    </div>
+  </details>
 
-  <div class="nav-section">Book 1 — World Guide</div>
-  <a class="nav-link" href="#book1/index" data-page="book1/index">Book 1 목차</a>
-  <a class="nav-link sub" href="#book1/ch1-welcome" data-page="book1/ch1-welcome">1장. 환영합니다</a>
-  <a class="nav-link sub" href="#book1/ch2-laws" data-page="book1/ch2-laws">2장. 세계의 법칙</a>
-  <a class="nav-link sub" href="#book1/ch3-history" data-page="book1/ch3-history">3장. 세계의 역사</a>
-  <a class="nav-link sub" href="#book1/ch4-geography" data-page="book1/ch4-geography">4장. 지리와 도시</a>
-  <a class="nav-link sub" href="#book1/ch5-society" data-page="book1/ch5-society">5장. 사회와 문명</a>
-  <a class="nav-link sub" href="#book1/ch6-factions" data-page="book1/ch6-factions">6장. 세력과 인물</a>
-  <a class="nav-link sub" href="#book1/glossary" data-page="book1/glossary">글로서리</a>
-  <a class="nav-link sub" href="#book1/anthology" data-page="book1/anthology">단편 앤솔로지</a>
+  <details class="nav-book">
+    <summary>Book 1 — World Guide</summary>
+    <div class="nav-children">
+      <a class="nav-link" href="#book1/index" data-page="book1/index">목차</a>
+      <a class="nav-link sub" href="#book1/ch1-welcome" data-page="book1/ch1-welcome">1장. 환영합니다</a>
+      <a class="nav-link sub" href="#book1/ch2-laws" data-page="book1/ch2-laws">2장. 세계의 법칙</a>
+      <a class="nav-link sub" href="#book1/ch3-history" data-page="book1/ch3-history">3장. 세계의 역사</a>
+      <a class="nav-link sub" href="#book1/ch4-geography" data-page="book1/ch4-geography">4장. 지리와 도시</a>
+      <a class="nav-link sub" href="#book1/ch5-society" data-page="book1/ch5-society">5장. 사회와 문명</a>
+      <a class="nav-link sub" href="#book1/ch6-factions" data-page="book1/ch6-factions">6장. 세력과 인물</a>
+      <a class="nav-link sub" href="#book1/glossary" data-page="book1/glossary">글로서리</a>
+      <a class="nav-link sub" href="#book1/anthology" data-page="book1/anthology">단편 앤솔로지</a>
+    </div>
+  </details>
 
-  <div class="nav-section">Book 2 — Player's Guide</div>
-  <a class="nav-link" href="#book2/index" data-page="book2/index">Book 2 목차</a>
-  <a class="nav-link sub" href="#book2/ch7-creation" data-page="book2/ch7-creation">7장. 캐릭터 생성</a>
-  <a class="nav-link sub" href="#book2/ch8-classes" data-page="book2/ch8-classes">8장. 클래스 상세</a>
-  <a class="nav-link sub" href="#book2/ch9-skills" data-page="book2/ch9-skills">9장. 인터렉션과 스킬</a>
-  <a class="nav-link sub" href="#book2/ch10-equipment" data-page="book2/ch10-equipment">10장. 장비와 임플란트</a>
-  <a class="nav-link sub" href="#book2/ch11-combat" data-page="book2/ch11-combat">11장. 전투</a>
-  <a class="nav-link sub" href="#book2/ch12-signal" data-page="book2/ch12-signal">12장. 신호연결과 해킹</a>
-  <a class="nav-link sub" href="#book2/ch13-dimensions" data-page="book2/ch13-dimensions">13장. 차원이동과 러닝</a>
-  <a class="nav-link sub" href="#book2/sheet" data-page="book2/sheet">캐릭터 시트</a>
+  <details class="nav-book">
+    <summary>Book 2 — Player's Guide</summary>
+    <div class="nav-children">
+      <a class="nav-link" href="#book2/index" data-page="book2/index">목차</a>
+      <a class="nav-link sub" href="#book2/ch7-creation" data-page="book2/ch7-creation">7장. 캐릭터 생성</a>
+      <a class="nav-link sub" href="#book2/ch8-classes" data-page="book2/ch8-classes">8장. 클래스 상세</a>
+      <a class="nav-link sub" href="#book2/ch9-skills" data-page="book2/ch9-skills">9장. 인터렉션과 스킬</a>
+      <a class="nav-link sub" href="#book2/ch10-equipment" data-page="book2/ch10-equipment">10장. 장비와 임플란트</a>
+      <a class="nav-link sub" href="#book2/ch11-combat" data-page="book2/ch11-combat">11장. 전투</a>
+      <a class="nav-link sub" href="#book2/ch12-signal" data-page="book2/ch12-signal">12장. 신호연결과 해킹</a>
+      <a class="nav-link sub" href="#book2/ch13-dimensions" data-page="book2/ch13-dimensions">13장. 차원이동과 러닝</a>
+      <a class="nav-link sub" href="#book2/sheet" data-page="book2/sheet">캐릭터 시트</a>
+    </div>
+  </details>
 
-  <div class="nav-section">Book 3 — GM Guide</div>
-  <a class="nav-link" href="#book3/index" data-page="book3/index">Book 3 목차</a>
-  <a class="nav-link sub" href="#book3/ch14-mission" data-page="book3/ch14-mission">14장. 미션 설계</a>
-  <a class="nav-link sub" href="#book3/ch15-city" data-page="book3/ch15-city">15장. 도시와 구역 생성</a>
-  <a class="nav-link sub" href="#book3/ch16-npc" data-page="book3/ch16-npc">16장. NPC와 적 데이터</a>
-  <a class="nav-link sub" href="#book3/ch17-scenarios" data-page="book3/ch17-scenarios">17장. 시나리오 3편</a>
-  <a class="nav-link sub" href="#book3/ch17-campaign" data-page="book3/ch17-campaign">17장b. 캠페인 아크</a>
-  <a class="nav-link sub" href="#book3/appendix" data-page="book3/appendix">부록: GM 도구</a>
+  <details class="nav-book">
+    <summary>Book 3 — GM Guide</summary>
+    <div class="nav-children">
+      <a class="nav-link" href="#book3/index" data-page="book3/index">목차</a>
+      <a class="nav-link sub" href="#book3/ch14-mission" data-page="book3/ch14-mission">14장. 미션 설계</a>
+      <a class="nav-link sub" href="#book3/ch15-city" data-page="book3/ch15-city">15장. 도시와 구역 생성</a>
+      <a class="nav-link sub" href="#book3/ch16-npc" data-page="book3/ch16-npc">16장. NPC와 적 데이터</a>
+      <a class="nav-link sub" href="#book3/ch17-scenarios" data-page="book3/ch17-scenarios">17장. 시나리오 3편</a>
+      <a class="nav-link sub" href="#book3/ch17-campaign" data-page="book3/ch17-campaign">17장b. 캠페인 아크</a>
+      <a class="nav-link sub" href="#book3/appendix" data-page="book3/appendix">부록: GM 도구</a>
+    </div>
+  </details>
 
-  <div class="nav-section">Book 4~7 — 준비 중</div>
-  <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 4: Trade Catalog</span>
-  <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 5: 계도감</span>
-  <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 6: 존재도감</span>
-  <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 7: 세력도감</span>
+  <details class="nav-book">
+    <summary>Book 4~7 — 준비 중</summary>
+    <div class="nav-children">
+      <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 4: 통합상거래 안내서</span>
+      <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 5: 계도감</span>
+      <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 6: 존재도감</span>
+      <span class="nav-link" style="color:var(--bg3);cursor:default;font-size:.8rem">Book 7: 세력도감</span>
+    </div>
+  </details>
 </nav>
 
 <!-- Main content -->
@@ -455,9 +508,14 @@ async function loadPage(page) {
   }
   breadcrumb.innerHTML = bc;
 
-  // Highlight active nav
+  // Highlight active nav + auto-open the right book section
   document.querySelectorAll('.nav-link').forEach(function(el) {
     el.classList.toggle('active', el.dataset.page === page);
+  });
+  // Auto-expand the book section containing the current page
+  document.querySelectorAll('.nav-book').forEach(function(det) {
+    var hasActive = det.querySelector('.nav-link.active');
+    if (hasActive) det.open = true;
   });
 
   // Fetch markdown
